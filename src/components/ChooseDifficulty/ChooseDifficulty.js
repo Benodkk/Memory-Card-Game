@@ -1,31 +1,39 @@
-import levelTypes from "../../database/levelTypes";
-
 import { useDispatch, useSelector } from "react-redux";
 import { setDifficulty } from "../../redux/difficulty";
 import { setAllLevels } from "../../redux/allLevels";
+
+import levelTypes from "../../database/levelTypes";
+
+import Button from "../Button/Button";
+
+import {
+  StyledChooseDifficulty,
+  StyledDifficultyButton,
+} from "./ChooseDifiiculty.styled";
 
 const ChooseDifficulty = ({ setDifficultyChosen }) => {
   const dispatch = useDispatch();
   const difficulty = useSelector((state) => state.difficulty);
   return (
-    <div>
+    <StyledChooseDifficulty>
       {levelTypes.map((level) => {
         return (
-          <button
+          <StyledDifficultyButton
             key={level.difficulty.id}
+            chosen={difficulty.id === level.difficulty.id}
             onClick={() => {
-              dispatch(setDifficulty(level.difficulty.id));
+              dispatch(setDifficulty(level.difficulty));
               dispatch(setAllLevels(level.levels));
             }}
           >
             {level.difficulty.label}
-          </button>
+          </StyledDifficultyButton>
         );
       })}
-      <button onClick={() => (difficulty ? setDifficultyChosen(true) : "")}>
+      <Button onClick={() => (difficulty ? setDifficultyChosen(true) : "")}>
         START!
-      </button>
-    </div>
+      </Button>
+    </StyledChooseDifficulty>
   );
 };
 

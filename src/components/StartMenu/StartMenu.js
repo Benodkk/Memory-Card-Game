@@ -1,9 +1,13 @@
+import Button from "../Button/Button";
+
+import { StyledStartMenu } from "./StartMenu.styled";
+
 const StartMenu = ({ setGameStarted, setShowRules }) => {
   return (
-    <div>
-      <button onClick={() => setGameStarted(true)}>Start Game</button>
-      <button onClick={() => setShowRules(true)}>Rules</button>
-    </div>
+    <StyledStartMenu>
+      <Button onClick={() => setGameStarted(true)}>Start Game</Button>
+      <Button onClick={() => setShowRules(true)}>Rules</Button>
+    </StyledStartMenu>
   );
 };
 

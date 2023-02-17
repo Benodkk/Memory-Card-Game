@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
-import allImages from "../../database/images/allImages";
 import { setCurrentLevel } from "../../redux/currentLevel";
+
+import allImages from "../../database/images/allImages";
+
 import OneCard from "../OneCard/OneCard";
+
+import {
+  StyledCardsContainer,
+  StyledGame,
+  StyledGameSectionHeading,
+} from "./Game.styled";
 
 const Game = ({ setGameOver }) => {
   const dispatch = useDispatch();
@@ -17,6 +26,7 @@ const Game = ({ setGameOver }) => {
   for (let i = 0; i < cardsQuantity; i++) {
     cards.push(<OneCard image={allImages[i]} action={() => handleClick(i)} />);
   }
+
   cards.sort(() => Math.random() - 0.5);
 
   useEffect(() => {
@@ -30,24 +40,26 @@ const Game = ({ setGameOver }) => {
   }, [clickedCards]);
 
   const handleClick = (newCard) => {
-    console.log(newCard);
     if (clickedCards.some((card) => card === newCard)) {
-      setGameOver("lose");
+      setGameOver("defeat");
     } else {
       setClickedCards([...clickedCards, newCard]);
     }
   };
 
   return (
-    <div>
-      <div>Difficulty: {store.difficulty}</div>
-      <div>Level: {store.currentLevel}</div>
-      <div>
+    <StyledGame>
+      <StyledGameSectionHeading>
+        <div>Difficulty: {store.difficulty.label}</div>
+        <div>Level: {store.currentLevel}</div>
+        <div>Score: {clickedCards.length}</div>
+      </StyledGameSectionHeading>
+      <StyledCardsContainer columns={cardsQuantity / 2}>
         {cards.map((card) => {
           return card;
         })}
-      </div>
-    </div>
+      </StyledCardsContainer>
+    </StyledGame>
   );
 };
 

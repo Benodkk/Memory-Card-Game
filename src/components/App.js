@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
+
 import { useDispatch } from "react-redux";
 import { resetLevel } from "../redux/currentLevel";
 import { resetDifficulty } from "../redux/difficulty";
-import { StyledApp } from "./App.styled";
-import ChooseLevel from "./ChooseDifficulty/ChooseDifficulty";
+
+import ChooseDifficulty from "./ChooseDifficulty/ChooseDifficulty";
 import Game from "./Game/Game";
 import GameOver from "./GameOver/GameOver";
 import Heading from "./Heading/Heading";
 import Rules from "./Rules/Rules";
 import StartMenu from "./StartMenu/StartMenu";
+
+import { StyledApp, StyledGameSection } from "./App.styled";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,20 +32,22 @@ function App() {
   return (
     <StyledApp>
       <Heading />
-      {gameOver ? (
-        <GameOver setGameOver={setGameOver} />
-      ) : difficultyChosen ? (
-        <Game setGameOver={setGameOver} />
-      ) : gameStarted ? (
-        <ChooseLevel setDifficultyChosen={setDifficultyChosen} />
-      ) : showRules ? (
-        <Rules />
-      ) : (
-        <StartMenu
-          setGameStarted={setGameStarted}
-          setShowRules={setShowRules}
-        />
-      )}
+      <StyledGameSection>
+        {gameOver ? (
+          <GameOver gameOver={gameOver} setGameOver={setGameOver} />
+        ) : difficultyChosen ? (
+          <Game setGameOver={setGameOver} />
+        ) : gameStarted ? (
+          <ChooseDifficulty setDifficultyChosen={setDifficultyChosen} />
+        ) : showRules ? (
+          <Rules setShowRules={setShowRules} />
+        ) : (
+          <StartMenu
+            setGameStarted={setGameStarted}
+            setShowRules={setShowRules}
+          />
+        )}
+      </StyledGameSection>
     </StyledApp>
   );
 }

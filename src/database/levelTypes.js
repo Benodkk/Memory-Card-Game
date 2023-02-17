@@ -7,15 +7,15 @@ const levelTypes = [
     levels: [
       {
         level: 1,
-        cards: 2,
+        cards: 4,
       },
       {
         level: 2,
-        cards: 2,
+        cards: 6,
       },
       {
         level: 3,
-        cards: 2,
+        cards: 8,
       },
     ],
   },
