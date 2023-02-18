@@ -8,6 +8,7 @@ export const StyledApp = styled.div`
   width: 100vw;
   background-image: url(${landscape});
   background-position: center;
+  background-size: cover;
 `;
 
 export const StyledGameSection = styled.section`
