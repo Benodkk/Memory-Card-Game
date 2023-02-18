@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/Memory-Card-Game/static/js/main.631b3581.js",
+    "static/media/landscape.webp": "/Memory-Card-Game/static/media/landscape.90d314a101cf6a9cabfd.webp",
+    "static/media/bilbo.png": "/Memory-Card-Game/static/media/bilbo.e3b5a878f17c65f428c0.png",
+    "static/media/aragorn.png": "/Memory-Card-Game/static/media/aragorn.54c588a00dd46dbfe815.png",
+    "static/media/merry.png": "/Memory-Card-Game/static/media/merry.15d722f942cc76188298.png",
+    "static/media/sauron.png": "/Memory-Card-Game/static/media/sauron.4a7220499dab8a2cea84.png",
+    "static/media/smeagol.png": "/Memory-Card-Game/static/media/smeagol.e4ef3069a8ad1d9300cd.png",
+    "static/media/saruman.png": "/Memory-Card-Game/static/media/saruman.33c202dd01c1da330e99.png",
+    "static/media/legolas.png": "/Memory-Card-Game/static/media/legolas.6315aa05f2aba849fa78.png",
+    "static/media/pippin.jpg": "/Memory-Card-Game/static/media/pippin.423aebfd2a0cb3795a67.jpg",
+    "static/media/gimli.jpg": "/Memory-Card-Game/static/media/gimli.167cf55661ed0f5db6f1.jpg",
+    "static/media/gandalf.jpg": "/Memory-Card-Game/static/media/gandalf.dea17aa77f5be3928d31.jpg",
+    "static/media/boromir.jpg": "/Memory-Card-Game/static/media/boromir.155f5b95782c7a966516.jpg",
+    "static/media/frodo.webp": "/Memory-Card-Game/static/media/frodo.f032b5e3abee33737b11.webp",
+    "static/media/Brother1816.woff": "/Memory-Card-Game/static/media/Brother1816.f60e79d1df07f9c817f2.woff",
+    "static/media/Brother1816.woff2": "/Memory-Card-Game/static/media/Brother1816.1c7ba1a15e445f2f5210.woff2",
+    "index.html": "/Memory-Card-Game/index.html",
+    "main.631b3581.js.map": "/Memory-Card-Game/static/js/main.631b3581.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.631b3581.js"
+  ]
+}
