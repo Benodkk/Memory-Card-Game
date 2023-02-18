@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentLevel } from "../../redux/currentLevel";
@@ -26,7 +26,6 @@ const Game = ({ setGameOver }) => {
   for (let i = 0; i < cardsQuantity; i++) {
     cards.push(<OneCard image={allImages[i]} action={() => handleClick(i)} />);
   }
-
   cards.sort(() => Math.random() - 0.5);
 
   useEffect(() => {

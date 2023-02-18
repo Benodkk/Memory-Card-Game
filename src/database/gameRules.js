@@ -2,7 +2,7 @@ const gameRules = {
   objective:
     "Choose all the cards once, while avoiding choosing the same card again.",
   gameplay: {
-    one: "The player chooses one card from the cards one th board.",
+    one: "The player chooses one card from the cards one the board.",
     two: "After choosing a card, the cards are shuffled and placed in a random order.",
     three:
       "The player chooses another card, while avoiding choosing a card that was already chosen",

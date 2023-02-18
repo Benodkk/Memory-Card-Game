@@ -1,3 +1,5 @@
+import React from "react";
+
 import gameRules from "../../database/gameRules";
 
 import Button from "../Button/Button";
@@ -23,14 +25,14 @@ const Rules = ({ setShowRules }) => {
         <StyledDescriptionTitle>Gameplay</StyledDescriptionTitle>
         <ul>
           {gameplayDescription.map((rule) => {
-            return <StyledLi>{rule}</StyledLi>;
+            return <StyledLi key={rule}>{rule}</StyledLi>;
           })}
         </ul>
         <StyledHr />
         <StyledDescriptionTitle>Rules</StyledDescriptionTitle>
         <ul>
           {rules.map((rule) => {
-            return <StyledLi>{rule}</StyledLi>;
+            return <StyledLi key={rule}>{rule}</StyledLi>;
           })}
         </ul>
       </StyledRules>

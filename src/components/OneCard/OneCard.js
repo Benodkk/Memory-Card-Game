@@ -1,3 +1,5 @@
+import React from "react";
+
 import { StyledOneCard } from "./OneCard.styled";
 
 const OneCard = ({ image, action }) => {

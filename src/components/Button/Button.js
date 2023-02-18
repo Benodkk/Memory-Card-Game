@@ -1,4 +1,4 @@
-import { StyledButton } from "./Button.styled";
+import React, { StyledButton } from "./Button.styled";
 
 const Button = ({ onClick, children }) => {
   return <StyledButton onClick={onClick}>{children}</StyledButton>;

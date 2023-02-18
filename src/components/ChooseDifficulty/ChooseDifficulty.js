@@ -1,3 +1,5 @@
+import React from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { setDifficulty } from "../../redux/difficulty";
 import { setAllLevels } from "../../redux/allLevels";
